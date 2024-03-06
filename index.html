@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="practise.css">
+</head>
+<body>
+    <div id="container">
+        <h1>Password Generator</h1>
+        <label>What will be the length of your password?</label>
+        <input id="length" type="number" value="5" min="5" max="20"><br>
+        <label>Do you want LowerCase alphabets?</label>
+        <select id="lower-select">
+            <option disabled selected>Select</option>
+            <option value="True">True</option>
+            <option value="False">False</option>
+        </select><br>
+        <label>Do you want UpperCase alphabets?</label>
+        <select id="upper-select">
+            <option disabled selected>Select</option>
+            <option value="True">True</option>
+            <option value="False">False</option>
+        </select><br>
+        <label>Do you want Numbers?</label>
+        <select id="number-select">
+            <option disabled selected>Select</option>
+            <option value="True">True</option>
+            <option value="False">False</option>
+        </select><br>
+        <label>Do you want characters?</label>
+        <select id="character-select">
+            <option disabled selected>Select</option>
+            <option value="True">True</option>
+            <option value="False">False</option>
+        </select><br>
+        <input id="screen" placeholder="--"><br>
+        <button id="trigger" onclick="generate()">Generate</button>
+        <script src="practise.js"></script>
+
+    </div>
+</body>
+</html>
