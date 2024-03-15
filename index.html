@@ -3,42 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Password Generator</title>
+    <title>PassWord Generator</title>
     <link rel="stylesheet" href="practise.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a889ecbe4a.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div id="container">
+    <div class="container">
         <h1>Password Generator</h1>
-        <label>What will be the length of your password?</label>
-        <input id="length" type="number" value="5" min="5" max="20"><br>
-        <label>Do you want LowerCase alphabets?</label>
-        <select id="lower-select">
-            <option disabled selected>Select</option>
-            <option value="True">True</option>
-            <option value="False">False</option>
-        </select><br>
-        <label>Do you want UpperCase alphabets?</label>
-        <select id="upper-select">
-            <option disabled selected>Select</option>
-            <option value="True">True</option>
-            <option value="False">False</option>
-        </select><br>
-        <label>Do you want Numbers?</label>
-        <select id="number-select">
-            <option disabled selected>Select</option>
-            <option value="True">True</option>
-            <option value="False">False</option>
-        </select><br>
-        <label>Do you want characters?</label>
-        <select id="character-select">
-            <option disabled selected>Select</option>
-            <option value="True">True</option>
-            <option value="False">False</option>
-        </select><br>
-        <input id="screen" placeholder="--"><br>
-        <button id="trigger" onclick="generate()">Generate</button>
-        <script src="practise.js"></script>
-
+        <div class="display-container">
+            <span id="result"></span>
+            <button id="copy">
+                <i class="fa-regular fa-copy"></i>
+            </button>
+        </div>
+        <div class="settings">
+            <div class="setting">
+                <label for="size">Size of PassWord:</label>
+                <span id="lengthvalue" style="font-weight:500;">10</span>
+                <input type="range" id="size" min="5" max="15" value="10">
+            </div>
+            <div class="setting">
+                <label for="uppercase">Include UpperCase:</label>
+                <input type="checkbox" id="uppercase" checked>
+            </div>
+            <div class="setting">
+                <label for="lowercase">Include LowerCase:</label>
+                <input type="checkbox" id="lowercase" checked>
+            </div>
+            <div class="setting">
+                <label for="numbers">Include Numbers:</label>
+                <input type="checkbox" id="numbers" checked>
+            </div>
+            <div class="setting">
+                <label for="characters">Include Special Characters:</label>
+                <input type="checkbox" id="characters" checked>
+            </div>
+            <button id="trigger">Generate Password</button>
+        </div>
     </div>
+    <script src="practise.js"></script>
 </body>
 </html>

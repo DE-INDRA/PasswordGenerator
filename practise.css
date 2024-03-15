@@ -1,67 +1,94 @@
 body{
-    background-color: antiquewhite;
+    background-color:rgb(246, 167, 210);
     display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
     margin: 0;
     padding: 0;
-    justify-content: center;
-    align-items:center ;
-}
-#container{
-    width: auto;
-    height: auto;
-    padding: 20px;
-    align-items: center;
-    justify-content: center;
-    background-color:lightpink;
-    border-width: 5px;
-    border-radius: 20px;
-    box-shadow: 5px 5px 15px rgb(99, 99, 99);
+    font-family: roboto;
+    color: rgb(88, 88, 88);
 }
 h1{
-    font-family: sans-serif;
-    font-weight: 500;
-}
-label{
-    font-size: 20px;
-    font-family: sans-serif;
-    margin-right: 20px;
-    margin-top: 10px;
-}
-#length{
-    font-size: 15px;
-    padding: 5px;
+    color:deeppink;
     text-align: center;
-    border-width: 1px;
-    border-radius: 6px;
 }
-select{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    padding: 2px 5px;
+.container{
+    background-color: bisque;
+    padding: 30px;
+    border-radius: 15px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    border: 5px solid deeppink;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.636);
+}
+.display-container{
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgb(169, 167, 167);
+    font-size: 22px;
+    padding: 5px;
+    border-radius: 8px;
+    color: black;
+    height: 40px;
+    letter-spacing: 1px;
+    margin-bottom:20px;
+}
+.display-container #copy{
+    position: absolute;
+    top: 7px;
+    right: 5px;
+    width: 35px;
+    height: 35px;
     border-radius: 5px;
-}
-#screen{
     font-size: 20px;
-    text-align: center;
-    margin: 10px 0px;
-    border-width: 3px;
-    padding: 5px;
+}
+.display-container #copy:active{
+    background-color: grey;
+    font-size: 15px;
+}
+.display-container #result{
+    margin-left: 10px;
+}
+.settings{
+    margin: 20px;
+    align-items: center;
+}
+.settings .setting{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    margin: 10px;
+}
+.settings .setting input{
+    width: 20px;
+}
+.settings .setting #size{
+    width: 120px;
 }
 #trigger{
-    font-family: sans-serif;
-    font-size: 15px;
-    padding: 5px 10px;
-    border-radius: 8px;
-    background-color:rgb(147, 67, 81);
-    color: white;
-    border-width: 3px;
-    border-color: brown;
+    position: relative;
+    left: 50px;
+    box-sizing: border-box;
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 20px;
+    background-color:deeppink;
+    border-radius: 5px;
+    color: aliceblue;
+    font-weight: bold;
+    border: 4px solid rgb(251, 154, 170);
+    transition: all 200ms ease;
 }
 #trigger:hover{
-    background-color:pink;
-    color:brown;
+    background-color:rgb(252, 220, 225);
+    color: deeppink;
+    border-color: deeppink;
 }
 #trigger:active{
-    opacity: 0.5;
+    border-color:bisque;
 }
